@@ -78,6 +78,15 @@
 - (void)show
 {
 	[backgroundView addSubview:alertView];
+	[alertView setAlpha:0];
 	[[[[UIApplication sharedApplication] delegate] window] addSubview:backgroundView];
+	
+	[UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    [alertView setAlpha:1];
+    [UIView commitAnimations];
 }
+
+
 @end
