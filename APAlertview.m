@@ -34,7 +34,7 @@
 		UIActivityIndicatorView *  loadingActivity  = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
 		loadingActivity.center = CGPointMake(messageLabel.center.x, messageLabel.center.y + 50);
 		[loadingActivity setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
-		[loadingActivity setColor:[UIColor blackColor]];
+		[loadingActivity setColor:loadingColor ? loadingColor : [UIColor blackColor]];
 		[loadingActivity startAnimating];
 		[alertView addSubview:loadingActivity];
     }
